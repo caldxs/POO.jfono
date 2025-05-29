@@ -1,48 +1,45 @@
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, Fono!");
-        Exercicio ex = new Exercicio();
-        ex.nome = "kiko";
-        ex.descricao = "exercício de aquecimento, imitando o kiko";
-        ex.tempoMin = 3;
-        ex.som = "sons/kiko.mp3";
+        System.out.println("Hello, Fono");
+        Exercicio ex = new Exercicio("Soprar bolinhas de algodão",
+                                     "Usar canudo para soprar bolinhas por um caminho até um alvo",
+                                     "/",
+                                     2,
+                                     "/");
+        Exercicio ex1 = new Exercicio("Vibrar lábios",
+                                      "Fazer os lábios vibrarem, como um som de motor de carro, para relaxar a musculatura e aquecer a voz",
+                                      "brrrrr - som de motor");
+        
+        System.out.println("nome:"+ex.getNome());
+        System.out.println("descrição:"+ex.getDescricao());
+        System.out.println("som:"+ex.getSom());
+        System.out.println("tempo mínimo:"+ex.getTempoMin());
+        System.out.println("exemplo:"+ex.getExemplo());
 
-        Exercicio ex1 = new Exercicio();
-        ex1.nome = "Boca de Peixe";
-        ex1.descricao = "Encoste os lábios firmemente e faça movimentos de abrir e fechar como um peixe.";
-        ex1.tempoMin = 3;
-        ex1.som = "sons/peixe.mp3";
+        System.out.println("nome:"+ex1.getNome());
+        System.out.println("descrição:"+ex1.getDescricao());
+        System.out.println("exemplo:"+ex1.getExemplo());
 
-        Exercicio ex2 = new Exercicio();
-        ex2.nome = "Sons do Sibilante";
-        ex2.descricao = "Pronuncie repetidamente os sons ?s? e ?z? de forma clara e pausada.";
-        ex2.tempoMin = 2;
-        ex2.som = "sons/sibilante.mp3";
-
-        Exercicio ex3 = new Exercicio();
-        ex3.nome = "Empurra Língua";
-        ex3.descricao = "Empurre a língua contra o céu da boca e mantenha por alguns segundos antes de relaxar.";
-        ex3.tempoMin = 3;
-        ex3.som = "sons/lingua.mp3";
-
-        Paciente p1 = new Paciente();
-        p1.email = "emailaleatorio123@gmail.com";
-        p1.nome = "José";
-
-        Paciente p2 = new Paciente();
-        p2.email = "emailaleatorio312@gmail.com";
-        p2.nome = "João";
-
-        Paciente p3 = new Paciente();
-        p3.email = "emailaleatorio321@gmail.com";
-        p3.nome = "Maria";
+        
+/*Crie mais dois objetos exercicicos - construtor e get
+ * Crie mais dois objetos clinica - construtor e get 
+ * Crie mais dois objetos paciente - construtor e get
+ * Crie mais dois objetos profissional - construtor e get
+ */
     
-        Clinica cl1 = new Clinica();
-        cl1.nome = "FonoVida";
-        cl1.cnpj = "12.345.678/0001-90";
+ Exercicio ex2 = new Exercicio("Apito do Navio");
+ System.out.println("Nome:"+ex2.getNome());
 
-        Clinica cl2 = new Clinica();
-        cl2.nome = "Clínica Voz Ativa";
-        cl2.cnpj = "98.765.432/0001-12";
+ Clinica c1 = new Clinica("FonoTech","1234567895236");
+ System.out.println(c1.getNome());
+ System.out.println(c1.getCnpj());
+
+ Profissional p1 = new Profissional("Jacobson","61987789876");
+ System.out.println("nome: "+p1.getNome()+ "\ntelefone:"+p1.getTelefone());
+
     }
 }
+
+
